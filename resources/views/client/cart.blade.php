@@ -10,7 +10,7 @@
                 <div class="col-lg-12">
                     <h2>Cart</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{url('/shop')}}">Shop</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('client/shop')}}">Shop</a></li>
                         <li class="breadcrumb-item active">Cart</li>
                     </ul>
                 </div>
@@ -39,7 +39,7 @@
                                 <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="frontend/images/img-pro-01.jpg" alt="" />
+									<img class="img-fluid" src="{{asset('frontend/images/img-pro-01.jpg')}}" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
@@ -63,7 +63,7 @@
                                 <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="frontend/images/img-pro-02.jpg" alt="" />
+									<img class="img-fluid" src="{{asset('frontend/images/img-pro-02.jpg')}}" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
@@ -87,7 +87,7 @@
                                 <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="frontend/images/img-pro-03.jpg" alt="" />
+									<img class="img-fluid" src="{{asset('frontend/images/img-pro-03.jpg')}}" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
@@ -165,7 +165,7 @@
                         </div>
                         <hr> </div>
                 </div>
-                <div class="col-12 d-flex shopping-box"><a href="{{url('/checkout')}}" class="ml-auto btn hvr-hover">Checkout</a> </div>
+                <div class="col-12 d-flex shopping-box"><a href="{{url('client/checkout')}}" class="ml-auto btn hvr-hover">Checkout</a> </div>
             </div>
 
         </div>

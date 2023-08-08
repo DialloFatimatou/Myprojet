@@ -9,7 +9,7 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{{url('/')}}">Home</a></li>
                         <li class="nav-item">
-                            <a href="{{url('/shop')}}" class="nav-link">SHOP</a>
+                            <a href="{{url('client/shop')}}" class="nav-link">SHOP</a>
                         </li>
                     </ul>
                 </div>
@@ -49,7 +49,7 @@
                             <p>1x - <span class="price">$40.00</span></p>
                         </li>
                         <li class="total">
-                            <a href="{{url('/cart')}}" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                            <a href="{{url('client/cart')}}" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
                             <span class="float-right"><strong>Total</strong>: $180.00</span>
                         </li>
                     </ul>

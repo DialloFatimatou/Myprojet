@@ -7,7 +7,7 @@
     <div id="slides-shop" class="cover-slides">
         <ul class="slides-container">
             <li class="text-center">
-                <img src="frontend/images/banner-01.jpg" alt="">
+                <img src="{{asset('frontend/images/banner-01.jpg')}}" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -19,7 +19,7 @@
                 </div>
             </li>
             <li class="text-center">
-                <img src="frontend/images/banner-02.jpg" alt="">
+                <img src="{{asset('frontend/images/banner-02.jpg')}}" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -31,7 +31,7 @@
                 </div>
             </li>
             <li class="text-center">
-                <img src="frontend/images/banner-03.jpg" alt="">
+                <img src="{{asset('frontend/images/banner-03.jpg')}}" alt="">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -56,19 +56,19 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="frontend/images/categories_img_01.jpg" alt="" />
+                        <img class="img-fluid" src="{{asset('frontend/images/categories_img_01.jpg')}}" alt="" />
                         <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="frontend/images/categories_img_02.jpg" alt="" />
+                        <img class="img-fluid" src="{{asset('frontend/images/categories_img_02.jpg')}}" alt="" />
                         <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="shop-cat-box">
-                        <img class="img-fluid" src="frontend/images/categories_img_03.jpg" alt="" />
+                        <img class="img-fluid" src="{{asset('frontend/images/categories_img_03.jpg')}}" alt="" />
                         <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
                     </div>
                 </div>
@@ -82,12 +82,12 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="offer-box-products">
-						<img class="img-fluid" src="frontend/images/add-img-01.jpg" alt="" />
+						<img class="img-fluid" src="{{asset('frontend/images/add-img-01.jpg')}}" alt="" />
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="offer-box-products">
-						<img class="img-fluid" src="frontend/images/add-img-02.jpg" alt="" />
+						<img class="img-fluid" src="{{asset('frontend/images/add-img-02.jpg')}}" alt="" />
 					</div>
 				</div>
 			</div>
@@ -124,7 +124,7 @@
                             <div class="type-lb">
                                 <p class="sale">Sale</p>
                             </div>
-                            <img src="frontend/images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                            <img src="{{asset('frontend/images/img-pro-01.jpg')}}" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -147,7 +147,7 @@
                             <div class="type-lb">
                                 <p class="new">New</p>
                             </div>
-                            <img src="frontend/images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                            <img src="{{asset('frontend/images/img-pro-02.jpg')}}" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -170,7 +170,7 @@
                             <div class="type-lb">
                                 <p class="sale">Sale</p>
                             </div>
-                            <img src="frontend/images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                            <img src="{{asset('frontend/images/img-pro-03.jpg')}}" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
@@ -193,7 +193,7 @@
                             <div class="type-lb">
                                 <p class="sale">Sale</p>
                             </div>
-                            <img src="frontend/images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                            <img src="{{asset('frontend/images/img-pro-04.jpg')}}" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>

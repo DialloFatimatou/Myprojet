@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoriesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,18 +22,22 @@ use App\Http\Controllers\AdminController;
 // });
 
 Route::get('/',[ClientController::class,'home']);
-Route::get('/shop',[ClientController::class,'shop']);
-Route::get('/cart',[ClientController::class,'cart']);
-Route::get('/register',[ClientController::class,'register']);
-Route::get('/signIn',[ClientController::class,'signIn']);
-Route::get('/checkout',[ClientController::class,'checkout']);
+Route::get('client/shop',[ClientController::class,'shop']);
+Route::get('client/cart',[ClientController::class,'cart']);
+Route::get('client/register',[ClientController::class,'register']);
+Route::get('client/signIn',[ClientController::class,'signIn']);
+Route::get('client/checkout',[ClientController::class,'checkout']);
 
 //admin
 Route::get('/admin',[AdminController::class,'home']);
-Route::get('/addcategory',[AdminController::class,'addcategory']);
-Route::get('/categories',[AdminController::class,'categories']);
-Route::get('/addsliders',[AdminController::class,'addsliders']);
-Route::get('/sliders',[AdminController::class,'sliders']);
-Route::get('/addproduit',[AdminController::class,'addproduit']);
-Route::get('/produits',[AdminController::class,'produits']);
-Route::get('/orders',[AdminController::class,'orders']);
+Route::get('/admin/addcategory',[AdminController::class,'addcategory']);
+Route::get('/admin/categories',[AdminController::class,'categories']);
+Route::get('/admin/addsliders',[AdminController::class,'addsliders']);
+Route::get('/admin/sliders',[AdminController::class,'sliders']);
+Route::get('/admin/addproduit',[AdminController::class,'addproduit']);
+Route::get('/admin/produits',[AdminController::class,'produits']);
+Route::get('/admin/orders',[AdminController::class,'orders']);
+
+//Categories controller
+Route::post('/admin/savecategories',[CategoriesController::class,'savecategories']);
+Route::delete('admin/delete_category/{id}',[CategoriesController::class,'delete']);

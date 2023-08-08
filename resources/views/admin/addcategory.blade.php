@@ -16,7 +16,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{url('/admin')}}">Home</a></li>
               <li class="breadcrumb-item active">Category</li>
             </ol>
           </div>
@@ -35,13 +35,21 @@
               <div class="card-header">
                 <h3 class="card-title">Add category</small></h3>
               </div>
+              @if (Session::has("status"))
+                 <br>
+                 <div class="alert alert-success">
+                  {{Session::get('status')}}
+                 </div>
+              @endif
+             
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="{{url('/admin/savecategories')}}" method="POST" >
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Category name</label>
-                    <input type="text" name="category_name" class="form-control" id="exampleInputEmail1" placeholder="Enter category">
+                    <input type="text" name="nom_category" class="form-control" id="exampleInputEmail1" placeholder="Enter category" requiredp>
                   </div>
                 </div>
                 <!-- /.card-body -->

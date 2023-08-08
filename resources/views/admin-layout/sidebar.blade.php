@@ -1,8 +1,8 @@
  <!-- Main Sidebar Container -->
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
-      <img src="backend/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="{{url('/admin')}}" class="brand-link">
+      <img src="{{asset('backend/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -11,7 +11,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="backend/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('backend/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander Pierce</a>
@@ -23,8 +23,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item has-treeview {{ request()   ->is('admin') ? 'menu-open' : '' }} ">
+            <a href="#" class="nav-link {{request()->is ('admin') ? 'active': ''}}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -33,7 +33,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="{{url('/admin')}}" class="nav-link active {{request()->is ('admin') ? 'active': ''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
@@ -41,17 +41,17 @@
             </ul>
           </li>
           
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item has-treeview {{ request()   ->is('admin') ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{request()->is  ('admin/categories') || request()->is  ('admin/addcategory')  ? 'active' : ''}} ">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Categories
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview ">
               <li class="nav-item">
-                <a href="{{url('/addcategory')}}" class="nav-link">
+                <a href="{{url('admin/addcategory')}}" class="nav-link {{request()->is  ('admin/addcategory')  ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
                   <p>Add category</p>
                 </a>
@@ -59,7 +59,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('/categories')}}" class="nav-link">
+                <a href="{{url('admin/categories')}}" class="nav-link {{ request()->is ('admin/addcategory') ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
                   <p>Categories</p>
                 </a>
@@ -67,8 +67,8 @@
             </ul>
           </li>
 
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item has-treeview {{ request()   ->is('admin') ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{request()->is  ('admin/sliders') || request()->is  ('admin/addsliders')  ? 'active' : ''}}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Sliders
@@ -77,7 +77,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('/addsliders')}}" class="nav-link">
+                <a href="{{url('admin/addsliders')}}" class="nav-link {{request()->is  ('admin/addsliders')  ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
                   <p>Add slider</p>
                 </a>
@@ -85,7 +85,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('/sliders')}}" class="nav-link">
+                <a href="{{url('admin/sliders')}}" class="nav-link {{request()->is  ('admin/sliders')  ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
                   <p>Sliders</p>
                 </a>
@@ -93,8 +93,8 @@
             </ul>
           </li>
 
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item has-treeview {{ request()   ->is('admin') ? 'menu-open' : '' }} ">
+            <a href="#" class="nav-link {{request()->is  ('admin/produits') || request()->is  ('admin/addproduit')  ? 'active' : ''}}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Products
@@ -103,7 +103,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('/addproduit')}}" class="nav-link">
+                <a href="{{url('admin/addproduit')}}" class="nav-link {{request()->is  ('admin/addproduit')  ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
                   <p>Add product</p>
                 </a>
@@ -111,7 +111,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('/produits')}}" class="nav-link">
+                <a href="{{url('admin/produits')}}" class="nav-link {{request()->is  ('admin/produits')  ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
                   <p>Produits</p>
                 </a>
@@ -119,8 +119,8 @@
             </ul>
           </li>
 
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item has-treeview {{ request()   ->is('admin') ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{request()->is  ('admin/orders') || request()->is  ('admin/addorders')  ? 'active' : ''}}">
               <i class="nav-icon fas fa-folder"></i>
               <p>
                 Orders
@@ -129,7 +129,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('/orders')}}" class="nav-link">
+                <a href="{{url('admin/orders')}}" class="nav-link {{request()->is  ('admin/addorders')  ? 'active' : ''}}">
                   <i class="far fa-file nav-icon"></i>
                   <p>Orders</p>
                 </a>
